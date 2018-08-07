@@ -71,6 +71,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight
 
+# Go
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+# Enable DM file preopting to reduce first boot time
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+endif
+
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/) \
