@@ -76,6 +76,9 @@ ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 # Enable DM file preopting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+# On P, classes*.dex of privileged apps are left uncompressed by default
+# For Go targets, compress them to save disk space.
+DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 endif
 
 # Input
