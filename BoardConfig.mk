@@ -46,6 +46,7 @@ BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boo
 
 ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 BOARD_KERNEL_CMDLINE += mem=1024M prlmk.kill_heaviest_gid=0
+BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket
 endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
