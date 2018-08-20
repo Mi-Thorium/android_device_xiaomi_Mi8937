@@ -91,6 +91,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbinder_shim \
     libfakelogprint \
+    libshim_mutexdestroy \
     libshim_pthreadts \
     libshims_android \
     libshims_ui \
