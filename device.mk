@@ -84,6 +84,7 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libbinder_shim \
+    libfakelogprint \
     libshim_mutexdestroy \
     libshim_pthreadts \
     libshims_android \
