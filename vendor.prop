@@ -2,3 +2,7 @@
 persist.vendor.audio.fluence.voicecomm=false
 ro.vendor.audio.sdk.fluencetype=fluence
 vendor.audio.feature.fluence.enable=true
+
+# Xiaomi Mi8937 - SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8937
