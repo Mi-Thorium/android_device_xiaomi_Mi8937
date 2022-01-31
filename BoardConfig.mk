@@ -23,6 +23,7 @@ DEVICE_PATH := device/xiaomi/Mi8937
 USES_DEVICE_XIAOMI_MI8937 := true
 
 # Asserts
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := mi8937,land,santoni,prada,ulysse,ugglite,ugg,rolex,riva,Mi8937,Mi8937_4_19
 
 # Camera
