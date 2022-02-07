@@ -45,12 +45,12 @@ static T get(const std::string& path, const T& def) {
 }
 
 Return<bool> PowerShare::isEnabled() {
-    const auto value = get<std::string>(WIRELESS_TX_ENABLE_PATH, "");
+    const auto value = get<std::string>(FLASHLIGHT_ENABLE_PATH, "");
     return !(value == "disable" || value == "0");
 }
 
 Return<bool> PowerShare::setEnabled(bool enable) {
-    set(WIRELESS_TX_ENABLE_PATH, enable ? 1 : 0);
+    set(FLASHLIGHT_ENABLE_PATH, enable ? 1 : 0);
 
     return isEnabled();
 }
