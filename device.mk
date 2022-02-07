@@ -46,6 +46,12 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse
 
+# Flashlight (prada)
+ifneq ($(wildcard hardware/lineage/interfaces/powershare/1.0/),)
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)/powershare-flashlight-prada
+PRODUCT_PACKAGES += vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight
+endif
+
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/) \
