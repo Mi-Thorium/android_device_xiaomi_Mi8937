@@ -13,10 +13,10 @@
         <value>1094400</value>
     </array>
     <array name="cpu.core_power.cluster0">
-        <value>43</value>
-        <value>54</value>
         <value>64</value>
-        <value>79</value>
+        <value>72</value>
+        <value>84</value>
+        <value>113</value>
     </array>
     <array name="cpu.core_speeds.cluster1">
         <value>960000</value>
@@ -27,12 +27,12 @@
         <value>1401000</value>
     </array>
     <array name="cpu.core_power.cluster1">
-        <value>59</value>
-        <value>75</value>
-        <value>91</value>
-        <value>94</value>
-        <value>108</value>
-        <value>111</value>
+        <value>87</value>
+		<value>113</value>
+        <value>134</value>
+        <value>137</value>
+        <value>148</value>
+        <value>165</value>
     </array>
     <array name="cpu.speeds">
         <value>960000</value>
@@ -41,13 +41,13 @@
         <value>1401000</value>
     </array>
     <array name="cpu.active">
-        <value>255</value>
-        <value>310</value>
-        <value>480</value>
-        <value>550</value>
+        <value>87</value>
+        <value>113</value>
+        <value>137</value>
+        <value>165</value>
     </array>
     <item name="cpu.suspend">2.8</item>
-    <item name="cpu.idle">4</item>
+    <item name="cpu.idle">1.93</item>
     <item name="bluetooth.active">60</item>
     <item name="bluetooth.at">1</item>
     <item name="bluetooth.on">1</item>
@@ -58,7 +58,7 @@
     <item name="video">60</item>
     <item name="camera.flashlight">250</item>
     <item name="camera.avg">580</item>
-    <item name="gps.on">70</item>
+    <item name="gps.on">30</item>
     <item name="radio.active">150</item>
     <item name="radio.scanning">55</item>
     <array name="radio.on">
