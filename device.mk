@@ -52,10 +52,6 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse
 
-# Flashlight (prada)
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight
-
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/) \
