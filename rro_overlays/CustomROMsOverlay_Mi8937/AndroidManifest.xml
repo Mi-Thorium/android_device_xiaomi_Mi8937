@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="android.overlay.xiaomi.mi8937.customroms"
+        android:versionCode="1"
+        android:versionName="1.0">
+        <overlay android:targetPackage="android"
+		android:priority="600"
+		android:isStatic="true" />
+</manifest>
