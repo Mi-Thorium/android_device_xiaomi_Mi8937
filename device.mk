@@ -22,6 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
+    CustomROMsOverlay_Mi8937 \
     xiaomi_landtoni_overlay \
     xiaomi_landtoni_overlay_Settings \
     xiaomi_prada_overlay \
