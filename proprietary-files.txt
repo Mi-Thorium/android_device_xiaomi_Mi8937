@@ -17,7 +17,7 @@ vendor/etc/diracmobile.config|b99e9492e77e52ca3a511feae0409d59f6aebb87
 # Charger - from daisy
 vendor/bin/hvdcp_opti
 
-# Firmware (GPU) - from PAN
+# Firmware (GPU) - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
 vendor/firmware/a300_pfp.fw
 vendor/firmware/a300_pm4.fw
 vendor/firmware/a506_zap.b00
@@ -28,7 +28,7 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Gatekeeper - from olive
+# Gatekeeper - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
 vendor/lib64/hw/gatekeeper.msm8937.so
 
 # IMS (uceService) - from olive (Pie)
@@ -36,22 +36,23 @@ vendor/lib64/hw/gatekeeper.msm8937.so
 system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 system/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
 
-# Keystore - from olive
+# Keystore - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
 vendor/lib64/hw/keystore.msm8937.so
 
-# Perf configs - from PAN
+# Perf configs - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
 vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perf-profile0.conf
-vendor/etc/perf/perf-profile1.conf
+vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/perf-profile0.conf
+vendor/etc/perf/perf-profile1.conf
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 
-# RIL (Data) - Netmgrd - from PAN
-vendor/etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config_override.xml|cc780730f939411b463d2c9cb660e46385e65e8b|4620dcab8486eb0e1317771bbc077092ee5a32de
+# RIL (Data) - Netmgrd - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
+vendor/etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config_override.xml|d8b0fc8ed7902f687d460bc776971a1642ba9d88|4620dcab8486eb0e1317771bbc077092ee5a32de
 
-# Sensors - from PAN
+# Sensors - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
 vendor/bin/sensors.qti
 vendor/lib/libsensor1.so
 vendor/lib64/libsensor1.so
