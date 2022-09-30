@@ -11,3 +11,11 @@ COMMON_LUNCH_CHOICES := \
     lineage_Mi8937-user \
     lineage_Mi8937-userdebug \
     lineage_Mi8937-eng
+
+PRODUCT_MAKEFILES += \
+    $(LOCAL_DIR)/bootleg_Mi8937.mk
+
+COMMON_LUNCH_CHOICES += \
+    bootleg_Mi8937-user \
+    bootleg_Mi8937-userdebug \
+    bootleg_Mi8937-eng
