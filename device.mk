@@ -103,3 +103,6 @@ else
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
 endif
 $(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)
+
+# CipherOS
+TARGET_BOOT_ANIMATION_RES := 720
