@@ -23,7 +23,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     xiaomi_landtoni_overlay \
-    xiaomi_prada_overlay \
     xiaomi_rolex_overlay \
     xiaomi_riva_overlay \
     xiaomi_ugg_overlay \
@@ -84,10 +83,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Wifi
-PRODUCT_PACKAGES += \
-    WifiOverlay_prada
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
