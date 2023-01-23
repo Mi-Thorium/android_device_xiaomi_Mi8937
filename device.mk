@@ -97,5 +97,9 @@ PRODUCT_PACKAGES += \
     WifiOverlay_prada
 
 # Inherit from vendor blobs
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+$(call inherit-product, vendor/xiaomi/Mi8937_4_19/Mi8937_4_19-vendor.mk)
+else
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
+endif
 $(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)

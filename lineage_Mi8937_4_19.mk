@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Kernel
-TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_VERSION := 4.19
 
 # Inherit from Mi8937 device
 $(call inherit-product, device/xiaomi/Mi8937/device.mk)
@@ -30,8 +30,8 @@ PRODUCT_PACKAGES += \
     xiaomi_ulysse_overlay_lineage
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Mi8937
-PRODUCT_NAME := lineage_Mi8937
+PRODUCT_DEVICE := Mi8937_4_19
+PRODUCT_NAME := lineage_Mi8937_4_19
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MSM8937
