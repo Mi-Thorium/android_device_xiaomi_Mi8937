@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight"
+#define LOG_TAG "vendor.lineage.powershare@1.0-service.oneplus"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
