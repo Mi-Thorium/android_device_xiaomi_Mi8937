@@ -1,9 +1,0 @@
-service vendor.powershare-hal-1-0.xiaomi_prada_flashlight /vendor/bin/hw/vendor.lineage.powershare@1.0-service.xiaomi_prada_flashlight
-    class hal
-    user system
-    group system
-    disabled
-
-on property:ro.vendor.xiaomi.device=prada
-    chown system system /sys/class/leds/flashlight/brightness
-    enable vendor.powershare-hal-1-0.xiaomi_prada_flashlight
