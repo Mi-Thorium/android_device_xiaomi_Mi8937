@@ -18,8 +18,6 @@
 
 #include <vendor/lineage/powershare/1.0/IPowerShare.h>
 
-#define FLASHLIGHT_ENABLE_PATH "/sys/class/leds/flashlight/brightness"
-
 namespace vendor {
 namespace lineage {
 namespace powershare {
