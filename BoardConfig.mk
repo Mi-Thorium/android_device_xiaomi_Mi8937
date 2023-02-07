@@ -56,6 +56,11 @@ TARGET_KERNEL_CONFIG := mi8937_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 endif
 
+# Malloc
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+MALLOC_SVELTE := true
+endif
+
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
 
