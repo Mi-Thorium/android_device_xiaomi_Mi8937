@@ -22,6 +22,11 @@ USES_DEVICE_XIAOMI_MI8937 := true
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := mi8937,landtoni,land,santoni,prada,ulova,ulysse,ugglite,ugg,rova,rolex,riva,Mi8937,Mi8937_4_19
 
+# Boot animation
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+TARGET_BOOTANIMATION_HALF_RES := true
+endif
+
 # Camera
 MI8937_CAM_USE_RENAMED_BLOBS_L := true
 MI8937_CAM_USE_RENAMED_BLOBS_U := true
