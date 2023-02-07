@@ -24,7 +24,7 @@ TARGET_OTA_ASSERT_DEVICE := mi8937,landtoni,land,santoni,prada,ulova,ulysse,uggl
 
 # Boot animation
 ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
-TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION := $(DEVICE_PATH)/../Tiare/prebuilt/bootanimation.zip
 endif
 
 # Camera
