@@ -26,6 +26,11 @@ PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/../Tiare/overlay-go
+endif
+
 PRODUCT_PACKAGES += \
     CustomROMsOverlay_Mi8937 \
     xiaomi_landtoni_overlay \
