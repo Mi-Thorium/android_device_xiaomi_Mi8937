@@ -29,6 +29,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/../Tiare/overlay-go
+
+PRODUCT_PACKAGES += \
+    DisablePinnerOverlay_Mi8937
 endif
 
 PRODUCT_PACKAGES += \
