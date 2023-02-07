@@ -44,6 +44,10 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/7824900.sdhci
 
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+BOARD_KERNEL_CMDLINE += mem=1024M prlmk.kill_heaviest_gid=0
+endif
+
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG := vendor/mi8937_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937-4.19
