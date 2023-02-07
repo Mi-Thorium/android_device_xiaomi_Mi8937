@@ -6,7 +6,12 @@
 
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, build/make/target/product/go_defaults_512.mk)
+else
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+endif
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
