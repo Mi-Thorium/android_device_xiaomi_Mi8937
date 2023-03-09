@@ -13,6 +13,11 @@ $(foreach p, $(call to-upper, $(ALL_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
+ifeq ($(MI8937_LIMIT_RAM_TO_1GB),true)
+$(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
+endif
+
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
@@ -83,18 +88,24 @@ BOARD_MI8937_DYNPART_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 419430
 BOARD_MI8937_DYNPART_PARTITION_LIST := $(ALL_PARTITIONS)
 
 # Partitions - reserved size
+ifneq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1))
+endif
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := 4096))
 
+ifneq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 83886080)) # 80 MB
+endif
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 41943040)) # 40 MB
 
+ifneq ($(MI8937_LIMIT_RAM_TO_1GB),true)
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 838860800 # 800 MB
+endif
 endif
 
 # Power
