@@ -53,14 +53,10 @@ TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/common.config \
     vendor/xiaomi/msm8937/common.config \
     vendor/xiaomi/msm8937/mi8937.config \
-    vendor/xiaomi/feature/android-12.config \
     vendor/xiaomi/feature/exfat.config \
-    vendor/xiaomi/feature/kprobes.config \
-    vendor/xiaomi/feature/lmkd.config
-
-ifeq ($(MI8937_CAM_USE_LATEST_CAMERA_STACK),true)
-TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.config
-endif
+    vendor/xiaomi/feature/no-camera-stack.config \
+    vendor/xiaomi/feature/no-wlan-driver.config \
+    vendor/xiaomi/feature/ntfs.config
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG += \
