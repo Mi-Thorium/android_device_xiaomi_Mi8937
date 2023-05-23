@@ -39,7 +39,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mi8937
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := \
     vendor/msm8937-perf_defconfig \
     vendor/xiaomi/common.config \
