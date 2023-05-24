@@ -51,7 +51,7 @@ TARGET_KERNEL_CONFIG := \
     vendor/xiaomi/feature/uclamp.config
 
 ifeq ($(MI8937_CAM_USE_LATEST_CAMERA_STACK),true)
-TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/feature/latest-camera-stack.config
+TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.config
 endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
