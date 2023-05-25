@@ -42,6 +42,7 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := \
     vendor/msm8937-perf_defconfig \
+    vendor/msm8937-legacy.config \
     vendor/xiaomi/common.config \
     vendor/xiaomi/msm8937/common.config \
     vendor/xiaomi/msm8937/mi8937.config \
@@ -53,6 +54,8 @@ TARGET_KERNEL_CONFIG := \
 ifeq ($(MI8937_CAM_USE_LATEST_CAMERA_STACK),true)
 TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.config
 endif
+
+# TODO: vendor/msm8937-legacy.config
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG += \
