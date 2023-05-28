@@ -41,7 +41,12 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
 TARGET_KERNEL_CONFIG := \
-    vendor/msm8937-perf_defconfig \
+    vendor/msm8937-perf_defconfig
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_KERNEL_CONFIG += \
+    vendor/msm8937-legacy.config
+endif
+TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/common.config \
     vendor/xiaomi/msm8937/common.config \
     vendor/xiaomi/msm8937/mi8937.config \
