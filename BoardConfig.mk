@@ -27,6 +27,9 @@ TARGET_OTA_ASSERT_DEVICE := mi8937,landtoni,land,santoni,prada,ulova,ulysse,uggl
 MI8937_CAM_USE_RENAMED_BLOBS_L := true
 MI8937_CAM_USE_RENAMED_BLOBS_P := true
 MI8937_CAM_USE_RENAMED_BLOBS_U := true
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_SUPPORT_HAL1 := false
+endif
 
 # Display
 TARGET_SCREEN_DENSITY := 280
