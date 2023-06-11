@@ -55,6 +55,7 @@ TARGET_KERNEL_CONFIG += \
     vendor/xiaomi/msm8937/mi8937.config \
     vendor/xiaomi/feature/android-12.config \
     vendor/xiaomi/feature/exfat.config \
+    vendor/xiaomi/feature/kprobes.config \
     vendor/xiaomi/feature/lmkd.config \
     vendor/xiaomi/feature/uclamp.config
 
