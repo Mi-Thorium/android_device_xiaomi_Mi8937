@@ -64,6 +64,8 @@ TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.confi
 endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_KERNEL_CONFIG += \
+    vendor/xiaomi/feature/wireguard.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937-4.19
 else
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
