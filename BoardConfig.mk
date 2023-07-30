@@ -50,13 +50,13 @@ TARGET_KERNEL_CONFIG += \
     vendor/msm8937-legacy.config
 endif
 TARGET_KERNEL_CONFIG += \
-    vendor/xiaomi/common.config \
+    vendor/common.config \
+    vendor/feature/android-12.config \
+    vendor/feature/exfat.config \
+    vendor/feature/kprobes.config \
+    vendor/feature/lmkd.config \
     vendor/xiaomi/msm8937/common.config \
-    vendor/xiaomi/msm8937/mi8937.config \
-    vendor/xiaomi/feature/android-12.config \
-    vendor/xiaomi/feature/exfat.config \
-    vendor/xiaomi/feature/kprobes.config \
-    vendor/xiaomi/feature/lmkd.config
+    vendor/xiaomi/msm8937/mi8937.config
 
 ifeq ($(MI8937_CAM_USE_LATEST_CAMERA_STACK),true)
 TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.config
@@ -64,11 +64,11 @@ endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG += \
-    vendor/xiaomi/feature/wireguard.config
+    vendor/feature/wireguard.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937-4.19
 else
 TARGET_KERNEL_CONFIG += \
-    vendor/xiaomi/feature/uclamp.config
+    vendor/feature/uclamp.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 endif
 
