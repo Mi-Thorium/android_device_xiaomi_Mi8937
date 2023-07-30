@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Kernel
+TARGET_USES_MITHORIUM_KERNEL := true
+
 # Partitions
 SSI_PARTITIONS := product system system_ext
 TREBLE_PARTITIONS := odm vendor
@@ -43,18 +46,12 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi8937
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7824900.sdhci
-TARGET_KERNEL_CONFIG := \
-    vendor/msm8937-perf_defconfig
+
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG += \
     vendor/msm8937-legacy.config
 endif
 TARGET_KERNEL_CONFIG += \
-    vendor/common.config \
-    vendor/feature/android-12.config \
-    vendor/feature/exfat.config \
-    vendor/feature/kprobes.config \
-    vendor/feature/lmkd.config \
     vendor/xiaomi/msm8937/common.config \
     vendor/xiaomi/msm8937/mi8937.config
 
@@ -63,14 +60,12 @@ TARGET_KERNEL_CONFIG += vendor/xiaomi/msm8937/optional/latest-camera-stack.confi
 endif
 
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
-TARGET_KERNEL_CONFIG += \
-    vendor/feature/wireguard.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937-4.19
-else
-TARGET_KERNEL_CONFIG += \
-    vendor/feature/uclamp.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
+TARGET_KERNEL_RECOVERY_CONFIG += \
+    vendor/msm8937-legacy.config
 endif
+TARGET_KERNEL_RECOVERY_CONFIG += \
+    vendor/xiaomi/msm8937/common.config \
+    vendor/xiaomi/msm8937/mi8937.config
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
