@@ -1,0 +1,4 @@
+# Xiaomi Mi8937 - Audio fluence
+persist.vendor.audio.fluence.voicecomm=false
+ro.vendor.audio.sdk.fluencetype=fluence
+vendor.audio.feature.fluence.enable=true
