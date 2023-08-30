@@ -97,4 +97,5 @@ PRODUCT_PACKAGES += \
     WifiOverlay_prada
 
 # Inherit from vendor blobs
+$(call inherit-product, vendor/private/custom-camera/mi8937/product.mk)
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)

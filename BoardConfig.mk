@@ -134,4 +134,5 @@ BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy-odm
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
+include vendor/private/custom-camera/mi8937/board.mk
 include vendor/xiaomi/Mi8937/BoardConfigVendor.mk
