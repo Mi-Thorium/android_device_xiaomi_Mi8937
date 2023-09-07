@@ -23,14 +23,14 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CustomROMsOverlay_Mi8937 \
-    xiaomi_landtoni_overlay \
-    xiaomi_landtoni_overlay_Settings \
     xiaomi_prada_overlay \
     xiaomi_prada_overlay_Settings \
     xiaomi_rolex_overlay \
     xiaomi_riva_overlay \
     xiaomi_ugg_overlay \
-    xiaomi_ugglite_overlay
+    xiaomi_ugglite_overlay \
+    xiaomi_wt8937_overlay \
+    xiaomi_wt8937_overlay_Settings
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -53,8 +53,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_wt8937
 
 # Input
 PRODUCT_COPY_FILES += \
