@@ -107,4 +107,3 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/Mi8937-2/Mi8937-vendor.mk)
