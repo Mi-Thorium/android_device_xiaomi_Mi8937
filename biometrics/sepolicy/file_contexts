@@ -8,9 +8,5 @@
 /data/gf_data(/.*)?                             u:object_r:gx_fpd_data_file:s0
 /mnt/vendor/persist/data/gxfp(/.*)?		u:object_r:gx_fpd_data_file:s0
 
-# Goodix Fingerprint
-/(vendor|system/vendor)/bin/gx_fpd		u:object_r:gx_fpd_exec:s0
-/(vendor|system/vendor)/overlayfs/[0-9a-z]+/bin/gx_fpd	u:object_r:gx_fpd_exec:s0
-
 # Shell Script
 /(vendor|system/vendor)/bin/init\.goodix\.sh	u:object_r:init_fingerprint_exec:s0
