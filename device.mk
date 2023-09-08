@@ -84,10 +84,10 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     fakelogprint \
+    libbinder_shim \
     libshim_mutexdestroy \
     libshim_pthreadts \
     libshims_android \
-    libshims_binder \
     libshims_ui \
     libwui
 
