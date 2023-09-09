@@ -27,9 +27,6 @@ TARGET_OTA_ASSERT_DEVICE := mi8937,land,santoni,prada,ulysse,ugglite,ugg,rolex,r
 
 # Camera
 #MI8937_CAM_USE_LATEST_CAMERA_STACK := true
-MI8937_CAM_USE_RENAMED_BLOBS_L := true
-MI8937_CAM_USE_RENAMED_BLOBS_P := true
-MI8937_CAM_USE_RENAMED_BLOBS_U := true
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_SUPPORT_HAL1 := false
 endif
