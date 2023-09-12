@@ -30,24 +30,6 @@ on property:ro.vendor.xiaomi.device=santoni
 on property:ro.vendor.xiaomi.series=wt8917
     enable vendor.baseband-sh
 
-# Camera
-service vendor.qcamerasvr /odm/bin/mm-qcamera-daemon
-    override
-    class late_start
-    user camera
-    group camera system inet input graphics
-
-on property:ro.vendor.xiaomi.device=land
-    setprop ro.hardware.camera land
-on property:ro.vendor.xiaomi.device=prada
-    setprop ro.hardware.camera prada
-on property:ro.vendor.xiaomi.device=santoni
-    setprop ro.hardware.camera wingtech
-on property:ro.vendor.xiaomi.series=ulysse
-    setprop ro.hardware.camera ulysse
-on property:ro.vendor.xiaomi.series=wt8917
-    setprop ro.hardware.camera wingtech
-
 # Fingerprint
 service vendor.goodix_script /vendor/bin/init.goodix.sh
     class late_start
@@ -101,65 +83,36 @@ on post-fs
 on property:ro.vendor.xiaomi.device=land
     # General
     mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/land/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/land/lib/:/odm/lib
     mount overlay overlay /odm/lib64 ro lowerdir=/odm/overlayfs/land/lib64/:/odm/lib64
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/land/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/wt8937/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=prada
     # General
     mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/prada/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/prada/lib/:/odm/lib
     mount overlay overlay /odm/lib64 ro lowerdir=/odm/overlayfs/prada/lib64/:/odm/lib64
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/prada/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/prada/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=riva
-    # General
-    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/wt8937-n-camera/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/riva/lib/:/odm/overlayfs/wt8937-n-camera/lib/:/odm/lib
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/riva/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/riva/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=rolex
-    # General
-    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/wt8937-n-camera/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/rolex/lib/:/odm/overlayfs/wt8937-n-camera/lib/:/odm/lib
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/rolex/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/rolex/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=santoni
     # General
-    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/santoni/bin/:/odm/overlayfs/wt8937-n-camera/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/santoni/lib/:/odm/overlayfs/wt8937-n-camera/lib/:/odm/lib
+    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/santoni/bin/:/odm/bin
     mount overlay overlay /odm/lib64 ro lowerdir=/odm/overlayfs/santoni/lib64/:/odm/lib64
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/santoni/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/wt8937/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=ugg
-    # General
-    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/ulysse/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/ugg/lib/:/odm/overlayfs/ulysse/lib/:/odm/lib
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/ugg/etc/camera/:/odm/overlayfs/ulysse/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/ulysse/etc/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=ugglite
-    # General
-    mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/ulysse/bin/:/odm/bin
-    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/ugglite/lib/:/odm/overlayfs/ulysse/lib/:/odm/lib
-    # Camera
-    mount overlay overlay /odm/etc/camera ro lowerdir=/odm/overlayfs/ugglite/etc/camera/:/odm/overlayfs/ulysse/etc/camera/:/odm/etc/camera
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/overlayfs/ulysse/etc/sensors/:/vendor/etc/sensors

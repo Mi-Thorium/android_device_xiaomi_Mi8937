@@ -71,9 +71,6 @@ case "$(cat /sys/xiaomi-msm8937-mach/codename)" in
 		setprop persist.vendor.audio.fluence.voicecall true
 		setprop persist.vendor.audio.fluence.voicerec false
 		set_acdb_path_props land
-		# Camera
-		setprop persist.camera.gyro.android 0
-		setprop persist.camera.gyro.disable 1
 		# Fingerprint
 		if grep -E "S88537AC1|S88537EC1" /sys/xiaomi-msm8937-mach/wingtech_board_id ; then
 			setprop ro.vendor.fingerprint.supported 0
@@ -101,10 +98,6 @@ case "$(cat /sys/xiaomi-msm8937-mach/codename)" in
 		setprop persist.vendor.audio.fluence.voicecall true
 		setprop persist.vendor.audio.fluence.voicerec false
 		set_acdb_path_props prada
-		# Camera
-		setprop persist.camera.gyro.android 0
-		setprop persist.camera.gyro.disable 1
-		setprop persist.camera.is_type 1
 		# Fingerprint
 		setprop ro.vendor.fingerprint.supported 1
 		;;

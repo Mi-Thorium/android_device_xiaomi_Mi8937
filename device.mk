@@ -41,17 +41,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/mixer_paths/,$(TARGET_COPY_OUT_ODM)/etc/) \
     $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/platform_info/,$(TARGET_COPY_OUT_ODM)/etc/)
 
-# Camera
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/mm-qcamera-daemon \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/etc/camera/.placeholder
-
-PRODUCT_PACKAGES += \
-    camera.land \
-    camera.prada \
-    camera.ulysse \
-    camera.wingtech
-
 # Fingerprint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/gx_fpd
@@ -91,8 +80,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbinder_shim \
     libfakelogprint \
-    libshim_mutexdestroy \
-    libshim_pthreadts \
     libshims_android \
     libshims_ui \
     libwui
