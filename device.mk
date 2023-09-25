@@ -85,6 +85,13 @@ PRODUCT_COPY_FILES += \
     $(foreach f, msm8917-sku5-snd-card_Button_Jack.kl msm8920-sku7-snd-card_Button_Jack.kl msm8952-sku1-snd-card_Button_Jack.kl, \
         $(LOCAL_PATH)/keylayout/msm8952-snd-card-mtp_Button_Jack.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/$(f))
 
+# Kernel - Prebuilt
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+PRODUCT_COPY_FILES += device/xiaomi/kernel-mithorium/Mi8937_4_19/Image.gz-dtb:kernel
+else
+PRODUCT_COPY_FILES += device/xiaomi/kernel-mithorium/Mi8937/Image.gz-dtb:kernel
+endif
+
 # Placeholder
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/.placeholder \
