@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
     camera.ulysse \
     camera.wingtech
 
+# Dumpstate
+PRODUCT_PACKAGES += \
+    libdumpstate_device
+
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck_ramdisk \
