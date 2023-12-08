@@ -7,6 +7,9 @@
 # Radio
 TARGET_HAS_NO_RADIO := true
 
+# Tablet
+TARGET_IS_TABLET := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
