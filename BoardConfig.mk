@@ -32,7 +32,7 @@ TARGET_SUPPORT_HAL1 := false
 endif
 
 # Display
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 160
 
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
