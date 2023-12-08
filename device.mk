@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Radio
+TARGET_HAS_NO_RADIO := true
+
 # Inherit from mithorium-common
 $(call inherit-product, device/xiaomi/mithorium-common/mithorium.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

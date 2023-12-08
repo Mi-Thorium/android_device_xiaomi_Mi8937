@@ -94,10 +94,6 @@ on boot
     chmod 0000 /sys/devices/virtual/graphics/fb0/hbm
 
 # OverlayFS
-on post-fs
-    # Netmgrd
-    mount overlay overlay /vendor/etc/data ro lowerdir=/vendor/overlayfs/common/etc/data/:/vendor/etc/data
-
 on property:ro.vendor.xiaomi.device=land
     # General
     mount overlay overlay /odm/bin ro lowerdir=/odm/overlayfs/land/bin/:/odm/bin
