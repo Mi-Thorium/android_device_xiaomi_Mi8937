@@ -79,6 +79,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_ulysse \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_wt8937
 
+PRODUCT_PACKAGES += \
+    liblzma.vendor:64
+
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/) \
