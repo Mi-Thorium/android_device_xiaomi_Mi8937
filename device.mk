@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libbinder_shim \
+    libbinder_shim.vendor \
     libfakelogprint \
     libshim_mutexdestroy \
     libshim_pthreadts \
