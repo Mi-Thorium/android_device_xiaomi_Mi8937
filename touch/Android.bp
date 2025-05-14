@@ -8,7 +8,7 @@ rust_binary {
     relative_install_path: "hw",
     init_rc: ["vendor.lineage.touch-service.xiaomi_mi8937.rc"],
     vintf_fragments: ["vendor.lineage.touch-service.xiaomi_mi8937.xml"],
-    device_specific: true,
+    vendor: true,
     rustlibs: [
         "libbinder_rs",
         "liblog_rust",
