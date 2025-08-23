@@ -94,6 +94,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sysfs
 
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+$(call soong_config_set,livedisplay_sysfs,enable_ce,true)
+$(call soong_config_set,livedisplay_sysfs,enable_re,true)
+
 # Placeholder
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_ODM)/bin/.placeholder \

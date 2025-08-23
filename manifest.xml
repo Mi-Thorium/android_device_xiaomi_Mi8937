@@ -4,11 +4,4 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IRadioConfig/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>vendor.lineage.livedisplay</name>
-        <version>1</version>
-        <fqname>IAdaptiveBacklight/default</fqname>
-        <fqname>IColorEnhancement/default</fqname>
-        <fqname>IReadingEnhancement/default</fqname>
-    </hal>
 </manifest>
