@@ -142,3 +142,8 @@ PRODUCT_PACKAGES += \
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)
+
+# Extra
+ifeq ($(TARGET_KERNEL_VERSION),4.9)
+EXTRA_LITE := true
+endif
