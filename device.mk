@@ -133,10 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.xiaomi_mi8937
-
 # Wifi
 PRODUCT_PACKAGES += \
     WifiOverlay_prada
