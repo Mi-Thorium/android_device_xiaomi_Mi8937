@@ -129,9 +129,20 @@ static void enable_gatekeeper_uid_offset() {
     }
 }
 
+#ifdef __ANDROID_RECOVERY__
+static void set_verified_boot_props_to_disabled(void) {
+    property_override("ro.boot.verifiedbootstate", "orange");
+    property_override("ro.boot.veritymode", "disabled");
+}
+#endif
+
 void vendor_load_properties() {
     determine_device();
     enable_gatekeeper_uid_offset();
     set_bootloader_prop();
     set_dalvik_heap();
+
+#ifdef __ANDROID_RECOVERY__
+    set_verified_boot_props_to_disabled();
+#endif
 }
